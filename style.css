@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: "Gasoek One", sans-serif;
+  min-height: 100vh;
+}
+
+nav {
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+.info-text {
+  max-width: 700px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.info-text a {
+  color: white;
+}
+
+.gallery {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid white;
+}
