@@ -1,16 +1,16 @@
 const counter = document.getElementById("km-counter");
 
-if (counter) {
-  let value = 0;
-  const target = 100;
+async function loadKm() {
+  try {
+    const response = await fetch("/api/km");
+    const data = await response.json();
 
-  const interval = setInterval(() => {
-    value++;
-
-    counter.textContent = value + "KM";
-
-    if (value >= target) {
-      clearInterval(interval);
+    if (counter) {
+      counter.textContent = data.km + "KM";
     }
-  }, 20);
+  } catch (error) {
+    console.error("Erreur chargement compteur :", error);
+  }
 }
+
+loadKm();
